@@ -1,1 +1,194 @@
+:root{
+    --Dark-Blue-intro : hsl(217, 28%, 15%);
+    --Dark-Blue-main : hsl(218, 28%, 13%);
+    --Dark-Blue-footer: hsl(216, 53%, 9%);
+    --Dark-Blue-ts: hsl(219, 30%, 18%);
+    --Cyan: hsl(176, 68%, 64%);
+    --Blue: hsl(198, 60%, 50%);
+    --Light-Red : hsl(0, 100%, 63%);
+    --White: #fff;
 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--Dark-Blue-footer);
+    height: 100%;
+}
+
+/*--------------------------- Navbar ---------------------------*/
+/* Dùng class để kiểm soát nav theo yêu cầu, không ảnh hưởng selector thẻ */
+.site-header { position: sticky; top: 0; background: var(--Dark-Blue-intro); color: var(--White); }
+.site-header h1 { margin: 0; padding: 16px 20px; }
+.nav-list { display: flex; gap: 20px; margin: 0; padding: 0 20px 16px 20px; }
+.nav-item { list-style: none; }
+.nav-link { color: #cbd5e1; text-decoration: none; }
+.nav-link:hover, .nav-link:focus { color: var(--Cyan); }
+
+/*-------------------------- Grid ------------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.col2{
+    grid-column: span 2;
+}
+.col3 {
+    grid-column: span 3;
+}
+
+.col4 {
+    grid-column: span 4;
+}
+
+.col5 {
+    grid-column: span 5;
+}
+.col6 {
+    grid-column: span 6;
+}
+
+.col7 {
+    grid-column: span 7;
+}
+.col8 {
+    grid-column: span 8;
+}
+
+.col9 {
+    grid-column: span 9;
+}
+
+.col9 {
+    grid-column: span 9;
+}
+
+.col10 {
+    grid-column: span 10;
+}
+
+.col11 {
+    grid-column: span 11;
+}
+
+.col12 {
+    grid-column: span 12;
+}
+
+
+/*------------------------------ Main --------------------------*/
+/* Từ đây trở xuống: chỉ thêm style cho cấu trúc HTML hiện có
+   (không đụng vào các thiết lập phía trên của bạn) */
+
+/* Bao khung nội dung, canh giữa và tạo khoảng thở */
+main {
+    max-width: 1100px;         /* giới hạn độ rộng để dễ đọc */
+    padding: 24px 20px 64px;   /* khoảng cách trong */
+    margin: 0 auto;            /* canh giữa theo chiều ngang */
+    color: var(--White);
+}
+
+/* Mỗi section tách nhau bằng khoảng cách + đường kẻ mờ */
+section {
+    padding: 32px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+section:first-of-type {
+    border-top: none;
+}
+
+ /* Danh sách sản phẩm: dùng hệ lưới 12 cột có sẵn (.grid-container)
+    Nên .product-list chỉ cần khoảng cách dọc giữa các hàng */
+ .product-list { row-gap: 16px; }
+
+ /* Thẻ sản phẩm cơ bản + span cột qua class .col4 ở HTML */
+ .product {
+     grid-column: span 4; /* 3 sản phẩm mỗi hàng trên desktop */
+     background: var(--Dark-Blue-ts);
+     border: 1px solid rgba(255,255,255,0.12);
+     border-radius: 12px;
+     padding: 16px;
+     text-align: left;
+ }
+
+/* Ảnh sản phẩm: cố định tỉ lệ, bo góc và tạo khoảng cách dưới tiêu đề */
+.product-image {
+    width: 100%;
+    height: 180px;              /* chiều cao cố định để card đều nhau */
+    object-fit: cover;          /* cắt ảnh cho vừa khung mà không méo */
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Giá làm nổi bật bằng tông Cyan/Blue có sẵn */
+.price {
+    color: var(--Cyan);
+    font-weight: 700;
+}
+
+/* Form liên hệ: chiều rộng tối đa và khoảng cách giữa các nhóm */
+.contact-form {
+    max-width: 560px;
+    margin: 0; /* giữ nguyên canh lề theo bố cục chung */
+}
+.form-group { margin-bottom: 12px; }
+label { display: block; margin-bottom: 6px; color: rgba(255,255,255,0.8); }
+
+/* Ô nhập liệu và nút: đồng nhất kích thước, dễ nhìn trên nền tối */
+input, textarea, button {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: var(--Dark-Blue-intro);
+    color: var(--White);
+    font: inherit;
+}
+input:focus, textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.35); /* viền sáng khi focus */
+    border-color: var(--Cyan);
+}
+button {
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--Cyan), var(--Blue));
+    color: #0b1220;
+    font-weight: 800;
+}
+button:hover { filter: brightness(1.06); }
+
+/* Footer: chữ nhạt hơn và căn giữa */
+footer {
+    padding: 24px 20px;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+}
+
+/* Responsive cho mobile: dưới 600px tối ưu đọc và chạm */
+ @media (max-width: 600px) {
+     /* Mobile: mỗi sản phẩm chiếm toàn bộ hàng */
+     .product { grid-column: span 12; }
+
+     /* Tăng khoảng đệm dọc một chút cho các section */
+     section { padding: 28px 0; }
+ }

@@ -11,13 +11,13 @@
 </head>
 <body>
     <!-- Header: tiêu đề website + thanh điều hướng -->
-    <header>
+    <header class="site-header">
         <h1>GG keys</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,24 +29,32 @@
             <p>We have wide-range game keys for you!</p>
         </section>
 
-        <!-- Danh sách sản phẩm nổi bật -->
+        <!-- Danh sách sản phẩm nổi bật
+             Áp dụng hệ lưới 12 cột qua class grid-container; mỗi sản phẩm dùng class col4
+             để chiếm 4 cột (tức 3 sản phẩm mỗi hàng trên desktop) -->
         <section id="products">
             <h2>Featured Products</h2>
-            <div class="product-list">
+            <div class="product-list grid-container">
                 <!-- Mỗi sản phẩm được trình bày trong 1 <article> riêng -->
-                <article class="product">
+                <article class="product col4">
+                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                    <img class="product-image" src="https://picsum.photos/seed/bf6/600/350" alt="Battlefield 6 cover" />
                     <h3>Battlefield 6</h3>
                     <p>The must-have-to-play First Person Shooter in 2025.</p>
                     <p class="price">1,059,000 VNĐ</p>
                 </article>
 
-                <article class="product">
+                <article class="product col4">
+                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                    <img class="product-image" src="https://picsum.photos/seed/clair33/600/350" alt="Clair 33 cover" />
                     <h3>Clair 33 </h3>
                     <p>Maybe 2025 Game of the Year</p>
                     <p class="price">849,000 VNĐ</p>
                 </article>
 
-                <article class="product">
+                <article class="product col4">
+                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                    <img class="product-image" src="https://picsum.photos/seed/wukong/600/350" alt="Black Myth Wukong cover" />
                     <h3>Black Myth Wukong</h3>
                     <p>Asia (China) 's Pride</p>
                     <p class="price">929,000 VNĐ</p>
