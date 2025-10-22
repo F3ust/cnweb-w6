@@ -27,6 +27,7 @@ a {
 body {
     background-color: var(--Dark-Blue-footer);
     height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; /* font không chân hiện đại */
 }
 
 /*--------------------------- Navbar ---------------------------*/
