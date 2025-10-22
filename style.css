@@ -287,6 +287,132 @@ footer {
     color: rgba(255,255,255,0.6);
 }
 
+
+/* Khung chứa thanh tìm kiếm */
+.search-bar {
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 12px 16px;
+    backdrop-filter: blur(6px);
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+/* Ô nhập tìm kiếm */
+.search-bar input {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: var(--White);
+    font: inherit;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* Nút tìm kiếm gradient */
+.search-bar button {
+    background: linear-gradient(90deg, var(--Cyan), var(--Blue));
+    color: #0b1220;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.search-bar button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.add-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--Cyan), var(--Blue));
+    color: #0b1220;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 36px;
+    margin-top: 32px;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+#addProductForm {
+    max-width: 500px;
+    margin: 24px auto 0;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 12px;
+    padding: 24px 20px;
+    backdrop-filter: blur(6px);
+    animation: fadeIn 0.3s ease;
+}
+
+#addProductForm label {
+    display: block;
+    margin-bottom: 6px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+}
+
+#addProductForm input {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: var(--Dark-Blue-intro);
+    color: var(--White);
+    margin-bottom: 12px;
+}
+
+#addProductForm input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* Nút lưu */
+#addProductForm button {
+    width: 100%;
+    background: linear-gradient(90deg, var(--Cyan), var(--Blue));
+    color: #0b1220;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#addProductForm button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Form ẩn mặc định */
+.hidden {
+    display: none;
+}
+
+/* Hiệu ứng mờ khi hiện form */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive cho mobile: dưới 600px tối ưu đọc và chạm */
 @media (max-width: 900px) {
     .product-list {
@@ -309,3 +435,55 @@ footer {
         padding: 28px 0;
     }
 }
+
+@media (max-width: 600px) {
+    
+
+    /* Form hiển thị chiếm gần hết chiều ngang */
+    #addProductForm {
+        width: 100%;
+        margin: 16px auto;
+        border-radius: 10px;
+        padding: 16px 14px;
+    }
+
+    /* Nút Add Product full width cho dễ chạm */
+    .add-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        margin-top: 20px;
+    }
+
+    /* Giảm khoảng cách cho mạch lạc */
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+/* Căn giữa tổng thể Add Product trên mọi kích thước */
+.add-btn,
+#addProductForm {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.search-section {
+        margin: 12px auto 20px;
+        max-width: 90%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+        height: auto;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+        height: 44px;
+    }

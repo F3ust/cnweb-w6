@@ -57,7 +57,19 @@
                 <div class="col8 align-center"><h2 class="title-2">Featured Products</h2></div>
                 <div class="col2"></div>
             </div>
-            <!-- Hàng sản phẩm theo tỉ lệ 2 - 8 - 2 -->
+
+            <!-- Form tìm kiếm sản phẩm -->
+            <div class="grid-container">
+                <div class="col3"></div>
+                <div class="col6">
+                    <div class="search-bar grid-container">
+                        <input class="col9" type="text" id="searchInput" placeholder="Search Product">
+                        <button class="col3" id="searchBtn">Search</button>
+                    </div>
+                </div>
+                <div class="col3"></div>
+            </div>
+            <!-- Danh sách sản phẩm -->
             <div class="grid-container">
                 <div class="col2"></div>
                 <div class="col8">
@@ -90,6 +102,35 @@
                 </div>
                 <div class="col2"></div>
             </div>
+
+            <!-- Nút thêm sản phẩm -->
+            <div class="grid-container">
+                <div class="col4"></div>
+                <div class="col4 align-center">
+                    <button id="addProductBtn" class="add-btn">Add Product</button>
+                </div>
+                <div class="col4"></div>
+            </div>
+
+             <!-- Form thêm sản phẩm -->
+            <div class="grid-container">
+                <div class="col4"></div>
+                <div class="col4">
+                    <form id="addProductForm" class="contact-form hidden">
+                        <div class="form-group">
+                            <label for="newName">Name:</label>
+                            <input type="text" id="newName" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPrice">Price:</label>
+                            <input type="text" id="newPrice" placeholder="Ex: 999,000 VNĐ" required>
+                        </div>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+                <div class="col4"></div>
+            </div>
+
         </section>
 
         <!-- Form liên hệ đơn giản dùng kiểm tra bắt buộc (required) của HTML5 -->
