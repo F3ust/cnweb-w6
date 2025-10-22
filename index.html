@@ -72,32 +72,32 @@
             <!-- Danh sách sản phẩm -->
             <div class="grid-container">
                 <div class="col2"></div>
-                <div class="col8">
+                <div class="prod-row col8">
                     <div class="product-list grid-container">
-                <!-- Mỗi sản phẩm được trình bày trong 1 <article> riêng -->
-                <article class="product">
-                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
-                    <img class="product-image" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/a9052c33c3bc80dc8f55fbfb3d18a62d6d762b2a/capsule_616x353.jpg?t=1760108538" alt="Battlefield 6 cover" />
-                    <h3 class="title-3">Battlefield 6</h3>
-                    <p class="text">The must-have-to-play First Person Shooter in 2025.</p>
-                    <p class="price">1,059,000 VNĐ</p>
-                </article>
+                        <!-- Mỗi sản phẩm được trình bày trong 1 <article> riêng -->
+                        <article class="product">
+                            <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                            <img class="product-image" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/a9052c33c3bc80dc8f55fbfb3d18a62d6d762b2a/capsule_616x353.jpg?t=1760108538" alt="Battlefield 6 cover" />
+                            <h3 class="title-3">Battlefield 6</h3>
+                            <p class="text">The must-have-to-play First Person Shooter in 2025.</p>
+                            <p class="price">1,059,000 VNĐ</p>
+                        </article>
 
-                <article class="product">
-                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
-                    <img class="product-image" src="https://cdn1.epicgames.com/spt-assets/330dace5ffc74156987f91d454ac544b/project-w-1kt2x.jpg" alt="Clair 33 cover" />
-                    <h3 class="title-3">Clair Obscur Expedition 33</h3>
-                    <p class="text">Maybe 2025 Game of the Year</p>
-                    <p class="price">849,000 VNĐ</p>
-                </article>
+                        <article class="product">
+                            <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                            <img class="product-image" src="https://cdn1.epicgames.com/spt-assets/330dace5ffc74156987f91d454ac544b/project-w-1kt2x.jpg" alt="Clair 33 cover" />
+                            <h3 class="title-3">Clair Obscur Expedition 33</h3>
+                            <p class="text">Maybe 2025 Game of the Year</p>
+                            <p class="price">849,000 VNĐ</p>
+                        </article>
 
-                <article class="product">
-                    <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
-                    <img class="product-image" src="https://gaming-cdn.com/images/products/7678/orig/black-myth-wukong-pc-steam-cover.jpg?v=1755639535" alt="Black Myth Wukong cover" />
-                    <h3 class="title-3">Black Myth Wukong</h3>
-                    <p class="text">Asia (China) 's Pride</p>
-                    <p class="price">929,000 VNĐ</p>
-                </article>
+                        <article class="product">
+                            <!-- Ảnh minh hoạ (mock) cho sản phẩm -->
+                            <img class="product-image" src="https://gaming-cdn.com/images/products/7678/orig/black-myth-wukong-pc-steam-cover.jpg?v=1755639535" alt="Black Myth Wukong cover" />
+                            <h3 class="title-3">Black Myth Wukong</h3>
+                            <p class="text">Asia (China) 's Pride</p>
+                            <p class="price">929,000 VNĐ</p>
+                        </article>
                     </div>
                 </div>
                 <div class="col2"></div>
@@ -124,6 +124,10 @@
                         <div class="form-group">
                             <label for="newPrice">Price:</label>
                             <input type="text" id="newPrice" placeholder="Ex: 999,000 VNĐ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newDesc">Description:</label>
+                            <textarea id="newDesc" rows="3" placeholder="Short description"></textarea>
                         </div>
                         <button type="submit">Save</button>
                     </form>
